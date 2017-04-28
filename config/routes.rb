@@ -13,6 +13,9 @@ resources :contacts,only: [:new,:create] do
   end
 end
 
+if Rails.env.development?
+  mount LetterOpenerWeb::Engine, at: "/letter_opener"
+end
 
 root'top#index'
 
