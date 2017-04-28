@@ -28,7 +28,6 @@ end
   def edit
  
   end
-  
   def update
     
     if @blog.update(blogs_params)
