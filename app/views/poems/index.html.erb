@@ -1,0 +1,11 @@
+<h1>Poem一覧</h1>
+
+
+<%= @poems.each do |poem| %>
+<p>TITLE:<%=poem.title %></p>
+<p>CONTENT:<%=poem.content%></p>
+
+
+<P><%= link_to "詳細",poem %></p>
+
+<% end %>
