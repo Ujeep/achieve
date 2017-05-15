@@ -61,4 +61,6 @@ group :development, :test do
   gem 'better_errors'
 end
 
-gem 'activeresource' 
+gem 'activeresource'
+
+gem 'jquery-turbolinks'
