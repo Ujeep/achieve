@@ -6,6 +6,17 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
+
+
+  if Rails.env.production?
+    config.omniauth :facebook, ENV["1869646403260117"], ENV["ab4fced2b8332d03d84dbdba805b262c"], scope: 'email', display: 'popup', info_fields: 'name, email'
+    config.omniauth :twitter, ENV["a9H9V4cslDwbsZoRoSVxLJPtg"], ENV["unnn1PblAhT9a4U6skvR240KxMaesBEW31R756CWD4Yg7n3YCx"], scope: 'email', display: 'popup', info_fields: 'name, email'
+  else
+    config.omniauth :facebook, ENV["1669322780029769"], ENV["a22f84a15ac0049e34e0c106f9d60ac2"], scope: 'email', display: 'popup', info_fields: 'name, email'
+    config.omniauth :twitter, ENV["ykQsCjXJGwkdj7r0CsXDpVu5s"], ENV["4GTs2I7MdCEXsMCNEsTJLAtwYXnDTmlgrlTdIlM7a6zmyRzeP8"], scope: 'email', display: 'popup', info_fields: 'name, email'
+  end
+
+
    config.secret_key = '1b1cc87836a7f49ef9d5fed5a16ebbe2454e3631f9fe9ea7bee71c1e98a2fa1ab442e8c70f0d87d61d7a6cd4afbbacecb5bdb88ea0ed3a6e6d24db5ba251fe1a'
 
   # ==> Mailer Configuration

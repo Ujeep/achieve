@@ -37,6 +37,7 @@ group :development, :test do
   gem 'byebug'
 group :development do
   gem 'letter_opener_web'
+  gem 'dotenv-rails'
 end
 
   # Access an IRB console on exception pages or by using <%= console %> in views
@@ -64,3 +65,10 @@ end
 gem 'activeresource'
 
 gem 'jquery-turbolinks'
+
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+
+gem 'carrierwave'
+gem 'rmagick'
